@@ -4,12 +4,14 @@ import AboutPost from "../components/AboutPost";
 const About = () => {
     const [posts] = useState([
         {
+            key: 1, 
             imgSrc: "assets/img/about/1.jpg",
             time: '2009-2011',
             title: 'Our Humble Beginnings',
             subtitle: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!',
         },
         {
+            key: 2,
             class: "timeline-inverted",
             imgSrc: "assets/img/about/2.jpg",
             time: 'March 2011',
@@ -17,12 +19,14 @@ const About = () => {
             subtitle: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!',
         },
         {
+            key: 3,
             imgSrc: "assets/img/about/3.jpg",
             time: 'December 2015',
             title: 'Transition to Full Service',
             subtitle: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!',
         },
         {
+            key: 4,
             class: "timeline-inverted",
             imgSrc: "assets/img/about/4.jpg",
             time: 'July 2020',
@@ -39,7 +43,7 @@ const About = () => {
                 </div>
                 <ul className="timeline">
                     {posts.map(post => (
-                        <AboutPost post={post} />
+                        <AboutPost key={post.key} post={post} />
                     ))}              
                     <li className="timeline-inverted">
                         <div className="timeline-image">

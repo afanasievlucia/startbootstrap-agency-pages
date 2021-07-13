@@ -4,16 +4,19 @@ import ServicesPost from "../components/ServicesPost";
 const Services = () => {
     const [services] = useState([
         {
+            key: 1,
             icon: 'fas fa-shopping-cart fa-stack-1x fa-inverse',
             title: 'E-Commerce',
             text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.'
         },
         {
+            key: 2,
             icon: 'fas fa-laptop fa-stack-1x fa-inverse',
             title: 'Responsive Design',
             text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.'
         },
         {
+            key: 3,
             icon: 'fas fa-lock fa-stack-1x fa-inverse',
             title: 'Web Security',
             text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.'
@@ -28,7 +31,7 @@ const Services = () => {
                 </div>
                 <div className="row text-center">
                     {services.map(service => (
-                        <ServicesPost service={service} />
+                        <ServicesPost key={service.key} service={service} />
                     ))}
                 </div>
             </div>

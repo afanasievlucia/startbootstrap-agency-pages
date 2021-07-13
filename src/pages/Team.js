@@ -4,16 +4,19 @@ import TeamMember from "../components/TeamMember";
 const Team = () => {
     const [members] = useState([
         {
+          key: 1,
           imgSrc: "assets/img/team/1.jpg",
           name: "Parveen Anand",
           job: 'Lead Designer'
         },
         {
+          key: 2,
           imgSrc: "assets/img/team/2.jpg",
           name: "Diana Petersen",
           job: 'Lead Marketer'
         },
         {
+          key: 3, 
           imgSrc: "assets/img/team/3.jpg",
           name: "Larry Parker",
           job: 'Lead Developer'
@@ -28,7 +31,7 @@ const Team = () => {
                 </div>
                 <div className="row">
                     {members.map(member => (
-                        <TeamMember member={member} />
+                        <TeamMember key={member.key} member={member} />
                     ))}
                 </div>
                 <div className="row">

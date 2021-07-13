@@ -1,26 +1,31 @@
 import NavItem from "./NavItem"
 import  { useState } from 'react'
-import Footer from "./Footer"
+
 
 const NavBar = () => {
     const [navItems] = useState([ 
         {
+            key: 1,
             href: "#services",
             item: 'Services'
         },
         {
+            key: 2,
             href: "#portfolio",
             item: "Potofolio"
         },
         {
+            key: 3,
             href: "#about",
             item: 'About'
         },
         {
+            key: 4,
             href: "#team",
             item: 'Team'
         },
         {
+            key: 5,
             href: "#contact",
             item: 'Contact'
         } 
@@ -35,9 +40,11 @@ const NavBar = () => {
                         <i className="fas fa-bars ms-1"></i>
                     </button>
                     <div className="collapse navbar-collapse" id="navbarResponsive">
+                        <ul className="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
                             {navItems.map(item => (
-                                <NavItem item={item} />
+                                <NavItem key={item.key} item={item} />
                             ))}
+                        </ul>
                     </div>
                 </div>
             </nav>

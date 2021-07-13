@@ -1,6 +1,6 @@
 const ModalItem = ({detail}) => {
     return (
-      <div className="portfolio-modal modal fade" id={detail.id} tabindex="-1" role="dialog" aria-hidden="true">
+      <div className="portfolio-modal modal fade" id={detail.id} tabIndex="-1" role="dialog" aria-hidden="true">
         <div className="modal-dialog">
           <div className="modal-content">
             <div className="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg" alt="Close modal" /></div>

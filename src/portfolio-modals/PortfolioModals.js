@@ -4,6 +4,7 @@ import ModalItem from "./Project-details";
 const PortfolioModals = () => {
     const [details] = useState([
         {
+            key: 1,
             id: "portfolioModal1",
             name: 'Project Name',
             subtitle: 'Lorem ipsum dolor sit amet consectetur.',
@@ -13,6 +14,7 @@ const PortfolioModals = () => {
             category: 'Illustration'            
         },
         {
+            key: 2,
             id: "portfolioModal2",
             name: 'Project Name',
             subtitle: 'Lorem ipsum dolor sit amet consectetur.',
@@ -22,6 +24,7 @@ const PortfolioModals = () => {
             category: 'Graphic Design'
         },
         {
+            key: 3,
             id: "portfolioModal3",
             name: 'Project Name',
             subtitle: 'Lorem ipsum dolor sit amet consectetur.',
@@ -31,6 +34,7 @@ const PortfolioModals = () => {
             category: 'Identity'
         },
         {
+            key: 4,
             id: "portfolioModal4",
             name: 'Project Name',
             subtitle: 'Lorem ipsum dolor sit amet consectetur.',
@@ -40,6 +44,7 @@ const PortfolioModals = () => {
             category: 'Branding'
         },
         {
+            key: 5,
             id: "portfolioModal5",
             name: 'Project Name',
             subtitle: 'Lorem ipsum dolor sit amet consectetur.',
@@ -49,6 +54,7 @@ const PortfolioModals = () => {
             category: 'Website design'
         },
         {
+            key: 6,
             id: "portfolioModal6",
             name: 'Project Name',
             subtitle: 'Lorem ipsum dolor sit amet consectetur.',
@@ -61,7 +67,7 @@ const PortfolioModals = () => {
     return (
         <>
         {details.map(detail => (
-            <ModalItem detail={detail} />
+            <ModalItem key={detail.key} detail={detail} />
         ))}
         </>
     )
